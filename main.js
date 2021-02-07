@@ -5,7 +5,7 @@ console.log("Hello World");
 let data = []
 
 data.push( 
-    { a : "연필", b : "가" , c : "하이"
+    { a : "멜", b : "가" , c : "하이"
     },
     {
         a : "하이", b : "나" , c : "꽃"
@@ -15,9 +15,64 @@ data.push(
     },
     {
         a : "꽃", b : "라" , c : "안녕"
-    }
+    },
+    { a : "안녕", b : "" , c :  "치킨"
+    },
 
 );
+
+function getData(word){
+    let itm = []
+    for(let i=0;i<data.length;i++){
+        if(data[i]['a'] == word){
+            itm.push(getData(data[i]['c']));
+        }
+    }
+    return {header: word, items: itm};
+}
+
+console.log(getData("하이"));
+
+// export function getData() {
+//     return [
+//         {
+//             header: 'Electronics', img: 'resources/electronics.png', items: [
+//                 { header: 'Trimmers/Shavers' },
+//                 { header: 'Tablets' },
+//                 {
+//                     header: 'Phones', img: 'resources/phones.png', items: [
+//                         { header: 'Apple' },
+//                         { header: 'Motorola', newItem: true },
+//                         { header: 'Nokia' },
+//                         { header: 'Samsung' }
+//                     ]
+//                 },
+//                 { header: 'Speakers', newItem: true },
+//                 { header: 'Monitors' }
+//             ]
+//         },
+//         {
+//             header: 'Toys', img: 'resources/toys.png', items: [
+//                 { header: 'Shopkins' },
+//                 { header: 'Train Sets' },
+//                 { header: 'Science Kit', newItem: true },
+//                 { header: 'Play-Doh' },
+//                 { header: 'Crayola' }
+//             ]
+//         },
+//         {
+//             header: 'Home', img: 'resources/home.png', items: [
+//                 { header: 'Coffee Maker' },
+//                 { header: 'Breadmaker', newItem: true },
+//                 { header: 'Solar Panel', newItem: true },
+//                 { header: 'Work Table' },
+//                 { header: 'Propane Grill' }
+//             ]
+//         }
+//     ];
+// }
+
+
 
 var arr3 = {};
 arr3.push = [];
