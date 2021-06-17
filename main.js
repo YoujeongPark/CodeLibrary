@@ -1,5 +1,103 @@
 'use strict';
 
+let objectExample = {};
+objectExample.BHC = "뿌링클";
+objectExample["kyochon"] = "허니콤보";
+console.log(objectExample);
+
+
+
+
+let sum = [' ']
+let a1 = ['a','b','c']
+let a2 = ['a','b','c']
+
+for (let index in a1){
+    console.log(index); //0 1 2 
+}
+
+for (let value of a1){
+    console.log(value); //a b c 
+}
+
+
+
+const multipeResult = [...a1,...sum ,...a2];
+console.log(multipeResult);
+
+console.log(sum.concat(a1));
+console.log(sum.concat(a2));
+
+console.log(sum.push(a1));
+console.log(sum.push(a2));
+
+let arrayPushCheck = []
+let a = ['a']
+let b = ['b']
+let c = ['c']
+arrayPushCheck.push(a);
+arrayPushCheck.push(b);
+console.log(arrayPushCheck);
+
+let arrayPushCheck2 = []
+arrayPushCheck2.push(arrayPushCheck)
+console.log(arrayPushCheck2);
+
+let conCatExaple = a.concat(b);
+console.log(conCatExaple)
+
+let array1 = [['a'],['b'],['c']];
+let array2 = [['a'],['b'],['c']];
+let arrayConcat = array1.concat(array2);
+console.log(arrayConcat);
+
+let arrayData2 = {a : "치킨", b : "피자",c : "피자"}
+
+if('a' in arrayData2){
+    delete arrayData2.a;
+    console.log(arrayData2)
+}else{
+    console.log("놉")
+}
+
+
+//let filterColumnData2 = arrayData2.filter((item)=> item.includes !== 'b')
+//console.log(filterColumnData2);
+
+let target = ["a","b","c"];
+console.log(target.shift());
+
+let filterColumnData = target.filter((item)=> item !== 'b')
+
+
+let minus = ["b"]
+
+console.log(target.filter(n => !minus.includes(n)));
+
+let targetCol = ["a","b","c"]
+for(let col in targetCol){
+    console.log(col); // 0 1 2  
+}
+
+for(let index in targetCol){
+    console.log(targetCol[index]); // a b c 
+}
+
+let arrayData = {a : "치킨", b : "피자"}
+
+
+for(let key in arrayData){
+    console.log(key," ---  " ,arrayData[key]);
+}
+
+// a -- 치킨
+// b -- 피자 
+
+for(let key in arrayData){
+    console.log(Object.key," ---  " ,arrayData[Object.key]);
+}
+
+
 console.log("Hello World");
 
 let data = []
@@ -13,13 +111,33 @@ data.push(
     {
         a : "꽃", b : "다" , c : "마우스"
     },
+);
+
+// data.filter((item, index, array)=>{
+//     return item
+// });
+
+let data2 = []
+data.push(
     {
         a : "꽃", b : "라" , c : "안녕"
     },
     { a : "안녕", b : "" , c :  "치킨"
-    },
+    }
+)
 
-);
+let data3 = data.concat(data2);
+console.log("concat" + data3);
+console.log(data3[0])
+
+
+data.forEach(function(item, index, array){
+    item["Order"] = (index + 1)
+    return array
+});
+
+console.log(data);
+
 
 function getData(word){
     let itm = []
@@ -81,12 +199,12 @@ arr3.push = [];
 
 
 
-var array2 = [1, "Hello", [1,2,3], { hi: 1 }];
-console.log(array2);
-array2.shift();
-console.log(array2);
-array2.shift();
-console.log(array2);
+var array3 = [1, "Hello", [1,2,3], { hi: 1 }];
+console.log(array3);
+array3.shift();
+console.log(array3);
+array3.shift();
+console.log(array3);
 
 
 
