@@ -1,23 +1,31 @@
+# List
 mylist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 
-#Access List Items
+## Access List Items
 print(mylist[1])
 
-# Negative Indexing
+## Negative Indexing
 print(mylist[-1])
 
-# Range of Indexes
+## Range of Indexes
 print(mylist[2:5])
 
-# Loop Through a List
+## Loop Through a List
 for x in mylist:
   print(x)
 
 
 
+# Dictionary
+myDic = {"rosy" : 20 , "job" : "developer"}
+print(myDic["rosy"]) # 20
+print(myDic.keys()) #dict_keys(['rosy', 'job'])
 
 
 
+
+
+###################################################################################
 # List Methods
 # append()	Adds an element at the end of the list
 # clear()	Removes all the elements from the list
