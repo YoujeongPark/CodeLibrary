@@ -71,6 +71,42 @@ function checkAvailability(arr, val) {
 checkAvailability(fruits, 'kela');   // false
 checkAvailability(fruits, 'banana'); // true
 
+// Array.prototype.every()
+function AllBiggerThan10(element, index, array) {
+    return element > 10;
+}
+[2, 5, 8, 1, 4].every(AllBiggerThan10); // false
+[11, 34, 25, 32, 49].every(AllBiggerThan10); // true
+
+[2, 5, 8, 1, 4].every(x=> x > 10) // false
+[11, 34, 25, 32, 49].every(x=> x > 10); // true
+
+
+//Array.prototype.find()
+// Example 1
+let found = [2, 5, 8, 1, 4].find(x=> x > 3 ) // 5
+
+
+// Example 2
+const inventory = [
+    {name: 'apples', quantity: 2},
+    {name: 'bananas', quantity: 0},
+    {name: 'cherries', quantity: 5}
+];
+
+function isCherries(fruit) {
+    return fruit.name === 'cherries';
+}
+
+inventory.find(isCherries) //  name: 'cherries', quantity: 5 }
+
+// Using arrow function and destructuring
+const result = inventory.find( ({ name }) => name === 'cherries' );
+console.log(result) // { name: 'cherries', quantity: 5 }
+
+
+
+
 
 // Array.prototype.slice()
 let sliceEx = items.slice(0,1);
