@@ -11,6 +11,9 @@ public class SortingClass {
         System.out.println(Arrays.toString(alphabets));
 
 
+        Arrays.sort(alphabets, String.CASE_INSENSITIVE_ORDER);
+        System.out.println(Arrays.toString(alphabets));
+
     }
 
 }
